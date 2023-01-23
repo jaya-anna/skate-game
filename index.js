@@ -55,15 +55,15 @@ ctx.drawImage(dinoImg, dinoX, dinoY, dinoWidth, dinoHeight)
 bg1X -= 2
 bg2X -= 2
 
-   if(bg1X < myCanvas.width){
-    bg1X = -myCanvas.width
+   if(bg1X < - myCanvas.width){
+    bg1X = myCanvas.width
    }
 
-   if(bg2X < myCanvas.width){
+   if(bg2X < -myCanvas.width){
     bg2X = myCanvas.width
    }
   
-   animateId = requestAnimationFrame(animate)
+   //animateId = requestAnimationFrame(animate)
    
 if(isMovingLeft && dinoX > -60){
   dinoX -= 5
