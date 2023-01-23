@@ -2,29 +2,36 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="/style.css" />
-    <title>Skate Fun</title>
+    <link rel="stylesheet" href="style.css" />
+    <title>Dinosaur Skate Extinction</title>
   </head>
   <body>
-    <div class="game-intro">
-      <img src="" alt="" class="" />
-      <br />
-      <button id="start-button">StartGame</button>
-      <h4>Instructions!!!</h4>
-      <p></p>
+    <div id= "background-color" class="game-intro">
+      <h1>DINOSAUR SKATE EXTINCTION</h1>
+      <section>
+      <label for="username">YOUR USERNAME</label>
+      </br>
+      <input type="text" id="name" name="name" placeholder="e.g. TyrANNAsaurus">
+      <p>ONLY DINOSAUR-RELATED NAMES ACCEPTED!!!</p>
+    </section>
+
+     <section>
+      <button id="start-button">START YOUR RIDE</button>
+      <h4>INSTRUCTION</h4>
+      <p>Navigate your DINOSAUR through the town and avoid the comet hail</p>
+      <p>by USING THE ARROWS! Master it and you'll be ready for the real extinction events!!! </p>
+    </section>
     </div>
 
     <div id="game-board">
-      <canvas id="canvas" width="500" height="700"></canvas>
+      <canvas id="canvas" width="800" height="500"></canvas>
     </div>
 
     <div id="game-over">
         <canvas id="canvas" width="500" height="700"></canvas>
       </div>
 
-    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="index.js"></script>
 
   </body>
 </html>
