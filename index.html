@@ -11,25 +11,35 @@
       <section>
       <label for="username">YOUR USERNAME</label>
       </br>
-      <input type="text" id="name" name="name" placeholder="e.g. TyrANNAsaurus">
+      <input type="text" id="name" name="name" placeholder="e.g. tyrANNAsaur">
       <p>ONLY DINOSAUR-RELATED NAMES ACCEPTED!!!</p>
     </section>
 
      <section>
-      <button id="start-button">START YOUR RIDE</button>
+      <button id="start-button1">START YOUR RIDE</button>
       <h4>INSTRUCTION</h4>
-      <p>Navigate your DINOSAUR through the town and avoid the comet hail</p>
-      <p>by USING THE ARROWS! Master it and you'll be ready for the real extinction events!!! </p>
+      <p>Navigate your DINOSAUR by using the WASD - KEYS </p>
+      <p class="last-paragraph">... SKATE and HAVE FUN ... ARGHH</p>
     </section>
     </div>
 
     <div id="game-board">
-      <canvas id="canvas" width="800" height="500"></canvas>
+      <canvas id="canvas" width="1000" height="600"></canvas>
+    </div>
+
+    <div id="game-won">
+      <h1>CONGRATULATIONS</h1>
+      <h2>YOU SCORED 100 POINTS</h2>
+      <p> That was an awesome ride, well done!!!</p>
+      <button id="start-button2">SKATE AGAIN</button>
     </div>
 
     <div id="game-over">
-        <canvas id="canvas" width="900" height="700"></canvas>
-      </div>
+    <h1>OHHH NOO YOU CRASHED</h1>
+    <p> You need to improve your skating skills!!!</p>
+    <p>Grab your skateboard and ... </p>
+    <button id="start-button3">SKATE AGAIN</button>
+    </div>
 
     <script type="text/javascript" src="index.js"></script>
 
