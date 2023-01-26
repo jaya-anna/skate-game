@@ -30,6 +30,15 @@ dinoImg.src = "/skate-game/images/dinosaur.png";
 const houseImg = new Image();
 houseImg.src = "/skate-game/images/house1.png";
 
+const cometImg = new Image();
+cometImg.src = "/skate-game/images/comet.png";
+
+const house2Img = new Image();
+house2Img.src = "/skate-game/images/house2.png";
+
+const audio = new Audio();
+audio.src = "/skate-game/images/Mein Song 2.m4a";
+
 let bg1X = 0;
 let bg2X = myCanvas.width;
 
@@ -43,6 +52,16 @@ const houseHeight = 80;
 let houseX = myCanvas.width - 130;
 let houseY = 400;
 
+const house2Width = 80;
+const house2Height = 80;
+let house2X = myCanvas.width - 130;
+let house2Y = 400;
+
+const cometWidth = 50;
+const cometHeight = 100;
+let cometX = 500;
+let cometY = 5;
+
 let isMovingRight = false;
 let isMovingLeft = false;
 let isMovingUp = false;
@@ -52,8 +71,11 @@ let gameOver = false;
 let animateId;
 
 let score = 0;
+let intervallId;
 
 let obstacles = [];
+let obstacle2 = [];
+let obstacle3 = [];
 
 class Obstacle {
   constructor(xPos, yPos, width, height) {
@@ -67,6 +89,14 @@ class Obstacle {
     ctx.drawImage(houseImg, this.xPos, this.yPos, this.width, this.height);
   }
 
+  house2Obstacle() {
+    ctx.drawImage(house2Img, this.xPos, this.yPos, this.width, this.height);
+  }
+
+  cometObstacle() {
+    ctx.drawImage(cometImg, this.xPos, this.yPos, this.width, this.height);
+  }
+
   checkCollision() {
     if (
       dinoX < this.xPos + this.width &&
@@ -77,19 +107,29 @@ class Obstacle {
       gameOver = true;
     }
   }
+
+  checkCollision2() {
+    if (
+      cometX < this.xPos + this.width &&
+      cometX + cometWidth > this.xPos &&
+      cometY < this.yPos + this.height &&
+      cometHeight + cometY > this.yPos
+    ) {
+      gameOver = true;
+    }
+  }
 }
 
 function animate() {
-  //ctx.clearRect(0, 0,myCanvas.width, myCanvas.height)
   ctx.drawImage(bgImg1, bg1X, 0, myCanvas.width, myCanvas.height);
   ctx.drawImage(bgImg2, bg2X, 0, myCanvas.width, myCanvas.height);
 
   ctx.drawImage(dinoImg, dinoX, dinoY, dinoWidth, dinoHeight);
 
-  ctx.font = "bold 30px Verdana";
+  ctx.font = "bold 35px Verdana";
   ctx.fillText(`SCORE: ${score}`, 750, 40);
 
-  if (animateId % 80 === 0) {
+  if (animateId % 100 === 0) {
     obstacles.push(
       new Obstacle(
         myCanvas.width,
@@ -100,10 +140,44 @@ function animate() {
     );
   }
 
+  if (animateId % 300 === 0) {
+    obstacle2.push(
+      new Obstacle(
+        myCanvas.width * Math.random(),
+        -myCanvas.height,
+        cometWidth,
+        cometHeight
+      )
+    );
+  }
+
+  if (animateId % 200 === 0) {
+    obstacle3.push(
+      new Obstacle(
+        myCanvas.width,
+        myCanvas.height * Math.random(),
+        house2Width,
+        house2Height
+      )
+    );
+  }
+
   obstacles.forEach((obstacle) => {
     obstacle.checkCollision();
     obstacle.houseObstacle();
     obstacle.xPos -= 5;
+  });
+
+  obstacle2.forEach((obstacle) => {
+    obstacle.checkCollision();
+    obstacle.cometObstacle();
+    obstacle.yPos += 6;
+  });
+
+  obstacle3.forEach((obstacle) => {
+    obstacle.checkCollision();
+    obstacle.house2Obstacle();
+    obstacle.xPos -= 2;
   });
 
   bg1X -= 2;
@@ -132,10 +206,13 @@ function animate() {
 
   if (gameOver) {
     cancelAnimationFrame(animateId);
-    if (score === 10) {
+    if (score === 102) {
       playAgain();
+      audio.pause();
     } else {
       stopGame();
+      clearInterval(intervallId);
+      audio.pause();
     }
   } else {
     animateId = requestAnimationFrame(animate);
@@ -145,15 +222,17 @@ function animate() {
 const startGame = () => {
   document.getElementById("background-color").style.display = "none";
 
+  audio.play();
+  audio.loop = true;
   animate();
 
-  const intervallId = setInterval(() => {
+  intervallId = setInterval(() => {
     score++;
-    if (score === 10) {
+    if (score === 102) {
       gameOver = true;
       clearInterval(intervallId);
     }
-  }, 500);
+  }, 400);
 };
 
 const stopGame = () => {
@@ -177,10 +256,19 @@ window.addEventListener("load", () => {
     gameOver = false;
     dinoX = 50;
     dinoY = myCanvas.height / 2 - dinoHeight / 2;
+
     houseX = myCanvas.width - 130;
     houseY = 400;
+
+    house2X = myCanvas.width - 130;
+    house2Y = 400;
+
+    cometX = 500;
+    cometY = 5;
     score = 0;
     obstacles = [];
+    obstacle2 = [];
+    obstacle3 = [];
 
     document.getElementById("game-board").style.display = "block";
     document.getElementById("game-won").style.display = "none";
@@ -193,10 +281,19 @@ window.addEventListener("load", () => {
     gameOver = false;
     dinoX = 50;
     dinoY = myCanvas.height / 2 - dinoHeight / 2;
+
     houseX = myCanvas.width - 130;
     houseY = 400;
+
+    house2X = myCanvas.width - 130;
+    house2Y = 400;
+
+    cometX = 500;
+    cometY = 5;
     score = 0;
     obstacles = [];
+    obstacle2 = [];
+    obstacle3 = [];
 
     document.getElementById("game-board").style.display = "block";
     document.getElementById("game-won").style.display = "none";
