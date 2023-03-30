@@ -1,18 +1,9 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Press+Start+2P&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Press+Start+2P&display=swap");
 
 body {
-  display: flex; 
-  text-align: center;
-  align-items: center; 
   height: 100%;
-  margin: 0;
-  padding: 0;
-  background-repeat: no-repeat;
   background-size: cover;
-  flex-direction: column;
- font-family: 'Press Start 2P', cursive;
+  font-family: "Press Start 2P", cursive;
 }
 
 .game-intro {
@@ -48,7 +39,7 @@ h4 {
 
 body button {
   font-size: 20px;
-  font-family: 'Press Start 2P', cursive;
+  font-family: "Press Start 2P", cursive;
   background-color: black;
   color: white;
   padding: 15px 35px;
