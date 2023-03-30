@@ -39,6 +39,9 @@ house2Img.src = "/skate-game/images/house2.png";
 const audio = new Audio();
 audio.src = "/skate-game/images/background_music.mp3";
 
+const gameOverAudio = new Audio("/skate-game/images/audio_fail-trombone-03.mp3"); 
+gameOverAudio.volume = 0.1;
+
 let bg1X = 0;
 let bg2X = myCanvas.width;
 
@@ -209,10 +212,12 @@ function animate() {
     if (score === 200) {
       playAgain();
       audio.pause();
+      gameOverAudio.play();
     } else {
       stopGame();
       clearInterval(intervallId);
       audio.pause();
+      gameOverAudio.play();
     }
   } else {
     animateId = requestAnimationFrame(animate);
@@ -230,7 +235,7 @@ const startGame = () => {
 
   intervallId = setInterval(() => {
     score++;
-    if (score === 102) {
+    if (score === 200) {
       gameOver = true;
       clearInterval(intervallId);
     }
