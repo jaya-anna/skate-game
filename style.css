@@ -16,6 +16,12 @@ body {
   font-weight: bold;
 }
 
+.flex{
+display: flex;
+flex-direction: column;
+justify-content: center;
+}
+
 #game-over {
   color: #fc05cf;
   text-align: center;
