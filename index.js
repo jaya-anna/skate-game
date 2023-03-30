@@ -221,7 +221,9 @@ function animate() {
 
 const startGame = () => {
   document.getElementById("background-color").style.display = "none";
-
+  document.getElementById("game-board").style.display = "block";
+  document.getElementById("game-won").style.display = "none";
+  document.getElementById("game-over").style.display = "none";
   audio.play();
   audio.loop = true;
   animate();
