@@ -131,7 +131,7 @@ function animate() {
 
   ctx.drawImage(dinoImg, dinoX, dinoY, dinoWidth, dinoHeight);
 
-  ctx.font = "bold 30px Press Start 2P";
+  ctx.font = "Press Start 2P", cursive
   ctx.fillText(`SCORE: ${score}`, 1200, 60);
 
   if (animateId % 100 === 0) {
