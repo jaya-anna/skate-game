@@ -40,7 +40,7 @@ const audio = new Audio("/skate-game/images/background_music.mp3");
 audio.volume = 0.5
 
 const gameOverAudio = new Audio("/skate-game/images/audio_fail-trombone-03.mp3"); 
-gameOverAudio.volume = 0.6;
+gameOverAudio.volume = 0.9;
 
 let bg1X = 0;
 let bg2X = myCanvas.width;
