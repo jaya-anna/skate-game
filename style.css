@@ -1,21 +1,23 @@
+
+
 .game-intro {
   padding: 0;
   text-align: center;
-  font-family: "Verdana";
+
   font-weight: bold;
 }
 
 #game-won {
   padding: 0;
   text-align: center;
-  font-family: "Verdana";
+  
   font-weight: bold;
 }
 
 #game-over {
   padding: 0;
   text-align: center;
-  font-family: "Verdana";
+
   font-weight: bold;
 }
 
