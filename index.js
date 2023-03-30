@@ -206,7 +206,7 @@ function animate() {
 
   if (gameOver) {
     cancelAnimationFrame(animateId);
-    if (score === 102) {
+    if (score === 200) {
       playAgain();
       audio.pause();
     } else {
