@@ -39,10 +39,6 @@ house2Img.src = "/skate-game/images/house2.png";
 const audio = new Audio();
 audio.src = "/skate-game/images/background_music.mp3";
 
-const winSound = new Audio()
-audio.src = "/skate-game/images/winSound.wav";
-winSound.volume = 0.5
-
 let bg1X = 0;
 let bg2X = myCanvas.width;
 
@@ -210,10 +206,9 @@ function animate() {
 
   if (gameOver) {
     cancelAnimationFrame(animateId);
-    if (score === 200) {
+    if (score === 102) {
       playAgain();
       audio.pause();
-      winSound.play()
     } else {
       stopGame();
       clearInterval(intervallId);
