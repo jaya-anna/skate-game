@@ -14,7 +14,7 @@ function changeBackground() {
 
 setInterval(changeBackground, 1000);
 
-// game
+// variables
 const myCanvas = document.querySelector("canvas");
 const ctx = myCanvas.getContext("2d");
 
@@ -248,6 +248,9 @@ const playAgain = () => {
 };
 
 window.addEventListener("load", () => {
+  document.getElementById("game-board").style.display = "none";
+  document.getElementById("game-won").style.display = "none";
+  document.getElementById("game-over").style.display = "none";
   document.getElementById("start-button1").onclick = () => {
     startGame();
   };
