@@ -36,11 +36,11 @@ cometImg.src = "/skate-game/images/comet.png";
 const house2Img = new Image();
 house2Img.src = "/skate-game/images/house2.png";
 
-const audio = new Audio();
-audio.src = "/skate-game/images/background_music.mp3";
+const audio = new Audio("/skate-game/images/background_music.mp3");
+audio.volume = 0.5
 
 const gameOverAudio = new Audio("/skate-game/images/audio_fail-trombone-03.mp3"); 
-gameOverAudio.volume = 0.1;
+gameOverAudio.volume = 0.6;
 
 let bg1X = 0;
 let bg2X = myCanvas.width;
@@ -129,8 +129,8 @@ function animate() {
 
   ctx.drawImage(dinoImg, dinoX, dinoY, dinoWidth, dinoHeight);
 
-  ctx.font = "bold 35px Verdana";
-  ctx.fillText(`SCORE: ${score}`, 750, 40);
+  ctx.font = "bold 30px Verdana";
+  ctx.fillText(`SCORE: ${score}`, 900, 40);
 
   if (animateId % 100 === 0) {
     obstacles.push(
