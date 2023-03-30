@@ -37,7 +37,7 @@ const house2Img = new Image();
 house2Img.src = "/skate-game/images/house2.png";
 
 const audio = new Audio();
-audio.src = "/skate-game/images/Mein Song 2.m4a";
+audio.src = "/sound/background_music.mp3";
 
 let bg1X = 0;
 let bg2X = myCanvas.width;
