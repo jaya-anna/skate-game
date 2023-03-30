@@ -47,6 +47,7 @@ body button {
   color: white;
   padding: 15px 35px;
   border: 0;
+  width: 300px;
   text-align: center;
 }
 
