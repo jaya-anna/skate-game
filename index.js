@@ -37,9 +37,11 @@ const house2Img = new Image();
 house2Img.src = "/skate-game/images/house2.png";
 
 const audio = new Audio("/skate-game/images/background_music.mp3");
-audio.volume = 0.5
+audio.volume = 0.5;
 
-const gameOverAudio = new Audio("/skate-game/images/audio_fail-trombone-03.mp3"); 
+const gameOverAudio = new Audio(
+  "/skate-game/images/audio_fail-trombone-03.mp3"
+);
 gameOverAudio.volume = 0.9;
 
 let bg1X = 0;
@@ -129,8 +131,8 @@ function animate() {
 
   ctx.drawImage(dinoImg, dinoX, dinoY, dinoWidth, dinoHeight);
 
-  ctx.font = "bold 30px Verdana";
-  ctx.fillText(`SCORE: ${score}`, 900, 40);
+  ctx.font = "bold 30px Press Start 2P";
+  ctx.fillText(`SCORE: ${score}`, 1200, 60);
 
   if (animateId % 100 === 0) {
     obstacles.push(
