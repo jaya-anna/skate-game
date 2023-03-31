@@ -17,6 +17,7 @@ body {
 .image {
   display: flex;
   justify-content: center;
+  margin-top: 15px;
 }
 
 #game-over {
@@ -33,7 +34,7 @@ body {
 
 h1 {
   font-size: 50px;
-  padding-top: 20px;
+  padding-top: 30px;
 }
 
 h4 {
@@ -48,14 +49,11 @@ body button {
   color: white;
   padding: 15px 35px;
   border: 0;
-  width: 300px;
+  width: 270px;
   text-align: center;
   font-weight: bolder;
 }
 
-.last-paragraph {
-  margin-top: 40px;
-}
 
 .footer {
   display: flex;
@@ -65,10 +63,10 @@ body button {
   color: black;
   font-family: "Press Start 2P", cursive;
   font-size: 7pt;
-  height: 200px
+  height: 50px
 }
 
 .instructions {
-  margin: 10px 200px;
+  margin: 10px 100px;
   line-height: 1.5rem;
 }
