@@ -135,8 +135,7 @@ function animate() {
 
   ctx.drawImage(dinoImg, dinoX, dinoY, dinoWidth, dinoHeight);
 
-  ctx.font = "18px monospace";
-  ctx.fillStyle = 'black';
+  ctx.font = "20px monospace bold"
   ctx.fillText(`SCORE: ${score}`, 1200, 60);
 
   if (animateId % 100 === 0) {
@@ -216,7 +215,7 @@ function animate() {
 
   if (gameOver) {
     cancelAnimationFrame(animateId);
-    if (score === 100) {
+    if (score === 200) {
       playAgain();
       audio.pause();
       gameWinAudio.play();
@@ -244,7 +243,7 @@ const startGame = () => {
 
   intervallId = setInterval(() => {
     score++;
-    if (score === 100) {
+    if (score === 200) {
       gameOver = true;
       clearInterval(intervallId);
     }
