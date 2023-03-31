@@ -15,6 +15,9 @@ function changeBackground() {
 setInterval(changeBackground, 1000);
 
 // variables
+
+const footer = document.querySelector(".footer");
+
 const myCanvas = document.querySelector("canvas");
 const ctx = myCanvas.getContext("2d");
 
@@ -41,6 +44,9 @@ audio.volume = 0.5
 
 const gameOverAudio = new Audio("/skate-game/images/audio_fail-trombone-03.mp3"); 
 gameOverAudio.volume = 0.9;
+
+const gameWinAudio = new Audio("/skate-game/images/game-win.wav"); 
+gameWinAudio.volume = 0.9;
 
 let bg1X = 0;
 let bg2X = myCanvas.width;
@@ -129,7 +135,8 @@ function animate() {
 
   ctx.drawImage(dinoImg, dinoX, dinoY, dinoWidth, dinoHeight);
 
-  ctx.font = "bold 30p"
+  ctx.font = "18px monospace";
+  ctx.fillStyle = 'black';
   ctx.fillText(`SCORE: ${score}`, 1200, 60);
 
   if (animateId % 100 === 0) {
@@ -212,7 +219,7 @@ function animate() {
     if (score === 200) {
       playAgain();
       audio.pause();
-      gameOverAudio.play();
+      gameWinAudio.play();
     } else {
       stopGame();
       clearInterval(intervallId);
@@ -229,6 +236,8 @@ const startGame = () => {
   document.getElementById("game-board").style.display = "block";
   document.getElementById("game-won").style.display = "none";
   document.getElementById("game-over").style.display = "none";
+  footer.style.display = "none";
+
   audio.play();
   audio.loop = true;
   animate();
@@ -246,12 +255,15 @@ const stopGame = () => {
   document.getElementById("game-board").style.display = "none";
   document.getElementById("game-won").style.display = "none";
   document.getElementById("game-over").style.display = "block";
+  footer.style.display = "none";
 };
 
 const playAgain = () => {
   document.getElementById("game-board").style.display = "none";
   document.getElementById("game-over").style.display = "none";
   document.getElementById("game-won").style.display = "block";
+  footer.style.display = "none";
+
 };
 
 window.addEventListener("load", () => {

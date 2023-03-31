@@ -41,6 +41,7 @@ h4 {
 }
 
 body button {
+  margin-top: 50px;
   font-size: 20px;
   font-family: "Press Start 2P", cursive;
   background-color: black;
@@ -49,8 +50,20 @@ body button {
   border: 0;
   width: 300px;
   text-align: center;
+  font-weight: bolder;
 }
 
 .last-paragraph {
   margin-top: 40px;
+}
+
+.footer{
+  display: flex;
+  flex-direction: column;
+  justify-content:flex-start;
+  align-items: flex-start;
+  color: black;
+  font-family: "Press Start 2P", cursive;
+  font-size: 9pt;
+
 }
