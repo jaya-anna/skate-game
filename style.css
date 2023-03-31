@@ -1,6 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Lobster&family=Press+Start+2P&display=swap");
 
 body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
   font-family: "Press Start 2P", cursive;
 }
 
@@ -54,7 +57,6 @@ body button {
   font-weight: bolder;
 }
 
-
 .footer {
   display: flex;
   flex-direction: column;
@@ -63,10 +65,10 @@ body button {
   color: black;
   font-family: "Press Start 2P", cursive;
   font-size: 7pt;
-  height: 50px
+  height: 50px;
 }
 
 .instructions {
-  margin: 10px 100px;
+  margin: 10px 80px;
   line-height: 1.5rem;
 }

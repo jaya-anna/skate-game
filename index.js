@@ -254,6 +254,7 @@ const startGame = () => {
 };
 
 const stopGame = () => {
+  document.getElementById("background-color").style.display = "none";
   document.getElementById("game-board").style.display = "none";
   document.getElementById("game-won").style.display = "none";
   document.getElementById("game-over").style.display = "block";
@@ -261,6 +262,7 @@ const stopGame = () => {
 };
 
 const playAgain = () => {
+  document.getElementById("background-color").style.display = "none";
   document.getElementById("game-board").style.display = "none";
   document.getElementById("game-over").style.display = "none";
   document.getElementById("game-won").style.display = "block";
