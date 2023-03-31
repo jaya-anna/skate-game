@@ -67,6 +67,10 @@ body button {
   margin-top: 13px;
 }
 
+.footer-music-reference {
+  font-size: 9px;
+}
+
 .instructions {
   margin: 10px 80px;
   line-height: 1.5rem;
