@@ -244,7 +244,7 @@ const startGame = () => {
 
   intervallId = setInterval(() => {
     score++;
-    if (score === 200) {
+    if (score === 100) {
       gameOver = true;
       clearInterval(intervallId);
     }
