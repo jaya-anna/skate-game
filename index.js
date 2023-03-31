@@ -40,14 +40,12 @@ const house2Img = new Image();
 house2Img.src = "/skate-game/images/house2.png";
 
 const audio = new Audio("/skate-game/images/background_music.mp3");
-audio.volume = 0.5;
+audio.volume = 0.5
 
-const gameOverAudio = new Audio(
-  "/skate-game/images/audio_fail-trombone-03.mp3"
-);
+const gameOverAudio = new Audio("/skate-game/images/audio_fail-trombone-03.mp3"); 
 gameOverAudio.volume = 0.9;
 
-const gameWinAudio = new Audio("/skate-game/images/game-win.wav");
+const gameWinAudio = new Audio("/skate-game/images/game-win.wav"); 
 gameWinAudio.volume = 0.9;
 
 let bg1X = 0;
@@ -138,7 +136,7 @@ function animate() {
   ctx.drawImage(dinoImg, dinoX, dinoY, dinoWidth, dinoHeight);
 
   ctx.font = "18px monospace";
-  ctx.fillStyle = "black";
+  ctx.fillStyle = 'black';
   ctx.fillText(`SCORE: ${score}`, 1200, 60);
 
   if (animateId % 100 === 0) {
@@ -246,7 +244,7 @@ const startGame = () => {
 
   intervallId = setInterval(() => {
     score++;
-    if (score === 100) {
+    if (score === 200) {
       gameOver = true;
       clearInterval(intervallId);
     }
@@ -254,7 +252,6 @@ const startGame = () => {
 };
 
 const stopGame = () => {
-  document.getElementById("background-color").style.display = "none";
   document.getElementById("game-board").style.display = "none";
   document.getElementById("game-won").style.display = "none";
   document.getElementById("game-over").style.display = "block";
@@ -262,11 +259,11 @@ const stopGame = () => {
 };
 
 const playAgain = () => {
-  document.getElementById("background-color").style.display = "none";
   document.getElementById("game-board").style.display = "none";
   document.getElementById("game-over").style.display = "none";
   document.getElementById("game-won").style.display = "block";
   footer.style.display = "none";
+
 };
 
 window.addEventListener("load", () => {
