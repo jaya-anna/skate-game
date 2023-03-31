@@ -41,7 +41,7 @@ h4 {
 }
 
 body button {
-  margin-top: 50px;
+  margin-top: 30px;
   font-size: 20px;
   font-family: "Press Start 2P", cursive;
   background-color: black;
@@ -64,10 +64,10 @@ body button {
   align-items: flex-start;
   color: black;
   font-family: "Press Start 2P", cursive;
-  font-size: 7pt;
+  font-size: 6pt;
 }
 
 .instructions {
-  margin: 2rem;
+  margin: 20px 100px;
   line-height: 1.5rem;
 }
