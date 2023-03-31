@@ -67,6 +67,7 @@ body button {
   font-family: "Press Start 2P", cursive;
   font-size: 8pt;
   height: 50px;
+  margin-left: 20px
 }
 
 .instructions {
