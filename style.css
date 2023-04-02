@@ -17,6 +17,10 @@ body {
   font-weight: bold;
 }
 
+#score {
+  font-size: 20px;
+}
+
 .image {
   display: flex;
   justify-content: center;
@@ -27,7 +31,7 @@ body {
   color: #fc05cf;
   text-align: center;
   font-weight: bold;
-  margin-top: 100px;
+  margin-top: 200px;
 }
 
 #background-color {
@@ -73,7 +77,7 @@ body button {
 .footer-music-reference {
   font-size: 9px;
   text-align: center;
-  margin-top: -10px
+  margin-top: -10px;
 }
 
 .instructions {
