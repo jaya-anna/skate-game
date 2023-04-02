@@ -139,7 +139,7 @@ function animate() {
 
   ctx.drawImage(dinoImg, dinoX, dinoY, dinoWidth, dinoHeight);
 
-  ctx.font = "30px monospace bold";
+  ctx.font = '25px monospace bold';
   ctx.fillText(`SCORE: ${score}`, 1200, 60);
 
   if (animateId % 100 === 0) {
