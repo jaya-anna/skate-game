@@ -110,12 +110,7 @@ body button {
   padding: 20px 0px;
 }
 
-/*
+
 #canvas {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: solid 8px black;
-  margin-top: 50px;
-  margin-left: 50px;
-}*/
+ float: center
+}
