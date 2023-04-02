@@ -93,5 +93,6 @@ body button {
   justify-content: center;
   align-items: center;
   border: solid 8px black;
-  margin-top: 100px;
+  margin-top: 50px;
+  margin-left: 50px;
 }
