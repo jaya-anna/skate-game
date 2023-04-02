@@ -17,6 +17,10 @@ body {
   font-weight: bold;
 }
 
+#game-won p {
+  width: 200px 
+}
+
 #score {
   font-size: 20px;
 }
