@@ -25,6 +25,7 @@ body {
 #game-won p {
   width: 700px;
   line-height: 1.2;
+  text-align: center;
 }
 
 #score {

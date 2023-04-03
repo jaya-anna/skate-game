@@ -221,7 +221,7 @@ function animate() {
 
   if (gameOver) {
     cancelAnimationFrame(animateId);
-    if (score === 200) {
+    if (score === 50) {
       playAgain();
       audio.pause();
       gameWinAudio.play();
@@ -249,7 +249,7 @@ const startGame = () => {
 
   intervallId = setInterval(() => {
     score++;
-    if (score === 200) {
+    if (score === 50) {
       gameOver = true;
       clearInterval(intervallId);
     }
