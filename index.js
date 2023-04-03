@@ -142,7 +142,7 @@ function animate() {
   ctx.font = "25px monospace";
   ctx.fillStyle = "black";
   ctx.fillText(`SCORE: ${score}`, 1300, 60);
-  //ctx.fill()
+  ctx.fill()
 
   if (animateId % 100 === 0) {
     obstacles.push(
