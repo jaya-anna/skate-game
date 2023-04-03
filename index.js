@@ -139,8 +139,10 @@ function animate() {
 
   ctx.drawImage(dinoImg, dinoX, dinoY, dinoWidth, dinoHeight);
 
-  ctx.font = '25px monospace bold';
-  ctx.fillText(`SCORE: ${score}`, 1200, 60);
+  ctx.font = "25px monospace";
+  ctx.fillStyle = "black";
+  ctx.fillText(`SCORE: ${score}`, 1400, 60);
+  //ctx.fill()
 
   if (animateId % 100 === 0) {
     obstacles.push(
