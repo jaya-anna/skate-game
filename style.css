@@ -15,17 +15,16 @@ body {
 #game-won {
   text-align: center;
   font-weight: bold;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   margin-top: -100px;
 }
 
 #game-won p {
-  width: 700px;
   line-height: 1.2;
   text-align: center;
+}
+
+.win-paragraph {
+  line-height: 1.2;
 }
 
 #score {
