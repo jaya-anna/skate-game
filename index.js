@@ -141,7 +141,7 @@ function animate() {
 
   ctx.font = "25px monospace";
   ctx.fillStyle = "black";
-  ctx.fillText(`SCORE: ${score}`, 1400, 60);
+  ctx.fillText(`SCORE: ${score}`, 1300, 60);
   //ctx.fill()
 
   if (animateId % 100 === 0) {
