@@ -1,23 +1,22 @@
 # DINOSAUR SKATE EXTINCTION
 
-## Description
 
-DINOSAUR SKATE EXTINCTION is a game where the player can test their skateboarding skills. Navigate through the and avoid the comet hail.
-Try to stay alive on the skateboard as long as possible and score points meanwhile.
-The game ends when you reached a score of 100. Then you'll be ready for the real extinction events! Arghhh ...
+
+## Description
+DINOSAUR SKATE EXTINCTION is a 2D-game that challenges players to test their skateboarding abilities by navigating through a treacherous town jungle while avoiding a hail of comets. The game's objective is to keep REXO - the dinosaur skater - for as long as possible on his skateboard, accumulating points along the way. The game's ultimate goal is to achieve a score of 100 points. 
 
 ## MVP (DOM - CANVAS)
 
-- game has one dinosaur skater that moves horizontally
-- dinosaur must avoid obstacles
+- one character - REXO: moves horizontally and vertically 
 - two house obstacle (appear randomly from the right side) and one comet obstacle (appear randomly from the top of the screen)
-- a collision with one of the obstacle will end the game
-- score counting till 100
-- by reaching a score of 100, game won
+ -> a collision with one of the obstacle will end the game
+- score counter on the right top corner of the game board 
+ -> score is counting till 100
+- by reaching a score of 100, game is won 
 
 ## Backlog
 
-- audio
+- implementing lives (3 hearts) 
 
 ## Data structure
 
@@ -35,11 +34,9 @@ playAgain(){}
 - SplashScreen
 - GameScreen
 - GameOverScreen
-- WinPlayAgainScreen
+- GameWinScreen
 
 ## Links
 
-Trello Link
-Slides Link
-Github repository Link
-Deployment Link
+Github repository Link 
+Deployment Link https://jaya-anna.github.io/skate-game/
