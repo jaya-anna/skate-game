@@ -142,7 +142,7 @@ function animate() {
   ctx.font = "30px monospace";
   ctx.fillStyle = "black";
   ctx.fillText(`SCORE: ${score}`, 1200, 60);
-  ctx.fill()
+  ctx.fill();
 
   if (animateId % 100 === 0) {
     obstacles.push(
@@ -221,7 +221,7 @@ function animate() {
 
   if (gameOver) {
     cancelAnimationFrame(animateId);
-    if (score === 50) {
+    if (score === 100) {
       playAgain();
       audio.pause();
       gameWinAudio.play();
@@ -249,11 +249,11 @@ const startGame = () => {
 
   intervallId = setInterval(() => {
     score++;
-    if (score === 50) {
+    if (score === 100) {
       gameOver = true;
       clearInterval(intervallId);
     }
-  }, 400);
+  }, 600);
 };
 
 const stopGame = () => {
