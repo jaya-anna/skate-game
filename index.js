@@ -253,7 +253,7 @@ const startGame = () => {
       gameOver = true;
       clearInterval(intervallId);
     }
-  }, 600);
+  }, 700);
 };
 
 const stopGame = () => {
